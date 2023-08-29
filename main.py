@@ -81,7 +81,7 @@ def main(user_input, user='', password=''):
     user_id = None
     if "https" in user_input:
         identify_link = user_input.split('/')
-        if 'p' in identify_link:
+        if identify_link == 'p':
             short_code = user_input.split('/')[4]
             post = instaloader.Post.from_shortcode(loader.context, short_code)
             username = post.owner_username
